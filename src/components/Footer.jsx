@@ -26,7 +26,7 @@ function Footer({ language }) {
     {
       name: t.footer.socials.instagram,
       label: t.footer.socials.instagram,
-      href: "https://github.com/ricky-codes12",
+      href: "https://www.instagram.com/rricky_nugraha?igsh=aWdkbjdtYXQyMjdn",
       icon: FaInstagram,
     },
   ];

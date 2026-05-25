@@ -225,7 +225,7 @@ function Hero({ language }) {
           </a>
 
           <a
-            href="https://github.com/ricky-codes12"
+            href="https://www.instagram.com/rricky_nugraha?igsh=aWdkbjdtYXQyMjdn"
             target="_blank"
             rel="noreferrer"
             aria-label="Instagram Ricky Nugraha"

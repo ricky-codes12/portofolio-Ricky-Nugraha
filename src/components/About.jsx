@@ -29,6 +29,18 @@ function About({ language }) {
           <h3>{t.about.careerTitle}</h3>
           <p>{t.about.careerText}</p>
         </div>
+
+        <div className="about__card">
+          <h3>{t.about.personalTitle}</h3>
+          <dl className="about__details">
+            {t.about.personalDetails.map((detail) => (
+              <div key={detail.label}>
+                <dt>{detail.label}</dt>
+                <dd>{detail.value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
       </div>
     </section>
   );

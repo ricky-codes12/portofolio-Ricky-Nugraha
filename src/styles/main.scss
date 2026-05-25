@@ -644,6 +644,38 @@ main {
       font-weight: 600;
     }
   }
+
+  &__details {
+    display: grid;
+    gap: 14px;
+    margin: 0;
+
+    div {
+      display: grid;
+      gap: 5px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+
+      &:last-child {
+        padding-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+
+    dt {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+    }
+
+    dd {
+      margin: 0;
+      color: var(--ink);
+      font-weight: 800;
+      line-height: 1.45;
+    }
+  }
 }
 
 .skills {
