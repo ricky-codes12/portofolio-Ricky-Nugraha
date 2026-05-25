@@ -163,7 +163,8 @@ function Hero({ language }) {
             as="a"
             href="/cv-ricky-nugraha.pdf"
             variant="outline"
-            download
+            className="border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
+            download="CV_RickyNugraha.pdf"
           >
             <Download size={18} />
             {t.hero.downloadCV}
