@@ -1966,7 +1966,17 @@ main {
     }
 
     &__socials {
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      width: min(100%, 290px);
+      margin-inline: auto;
+
+      a {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1;
+      }
     }
 
     &__stats div {
@@ -2076,9 +2086,13 @@ main {
     font-size: 38px;
   }
 
-  .hero__socials a {
-    width: 46px;
-    height: 46px;
+  .hero__socials {
+    width: min(100%, 270px);
+
+    a {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .projects__links a,
