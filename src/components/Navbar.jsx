@@ -37,7 +37,7 @@ function Navbar({ theme, onToggleTheme, language, onToggleLanguage }) {
 
       <div className="navbar__actions">
         <button
-          className="navbar__theme"
+          className="navbar__theme navbar__language"
           type="button"
           aria-label={t.nav.toggleLanguage}
           onClick={onToggleLanguage}

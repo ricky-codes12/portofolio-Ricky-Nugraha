@@ -1819,6 +1819,11 @@ main {
         display: none;
       }
     }
+
+    &__language span {
+      display: inline;
+      font-size: 13px;
+    }
   }
 
   :root[data-theme="dark"] .navbar__menu {
