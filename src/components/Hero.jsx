@@ -145,7 +145,7 @@ function Hero({ language }) {
           <Button
             as="a"
             href="#projects"
-            className="shadow-[0_18px_40px_rgba(14,116,144,0.24)]"
+            className="hero__button shadow-[0_18px_40px_rgba(14,116,144,0.24)]"
           >
             <ArrowUpRight size={18} />
             {t.hero.viewProjects}
@@ -155,6 +155,7 @@ function Hero({ language }) {
             as="a"
             href="#contact"
             variant="secondary"
+            className="hero__button"
           >
             {t.hero.contact}
           </Button>
@@ -163,7 +164,7 @@ function Hero({ language }) {
             as="a"
             href="/cv-ricky-nugraha.pdf"
             variant="outline"
-            className="border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
+            className="hero__button border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
             download="CV_RickyNugraha.pdf"
           >
             <Download size={18} />

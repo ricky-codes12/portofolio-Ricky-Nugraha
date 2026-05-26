@@ -378,6 +378,12 @@ main {
     margin-top: 34px;
   }
 
+  &__button {
+    min-width: 0;
+    white-space: normal;
+    text-align: center;
+  }
+
   &__meta {
     display: flex;
     flex-wrap: wrap;
@@ -1923,6 +1929,13 @@ main {
 
     &__buttons {
       width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+
+    &__button {
+      width: 100%;
+      min-height: 48px;
     }
 
     &__meta span {
@@ -1985,6 +1998,16 @@ main {
 
     span:nth-child(3) {
       grid-column: auto;
+    }
+  }
+
+  .projects__links {
+    display: grid;
+    grid-template-columns: 1fr;
+
+    a {
+      width: 100%;
+      min-width: 0;
     }
   }
 
