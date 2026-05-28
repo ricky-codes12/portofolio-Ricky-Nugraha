@@ -23,7 +23,7 @@ export const translations = {
       viewProjects: "Lihat Proyek",
       contact: "Hubungi Saya",
       downloadCV: "Download CV",
-      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
       availability: "Tersedia untuk peran web & IT support",
       stats: {
         focusValue: "4+",
@@ -55,7 +55,7 @@ export const translations = {
       personalDetails: [
         {
           label: "Alamat",
-          value: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+          value: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
         },
         {
           label: "Hobi",
@@ -240,13 +240,13 @@ export const translations = {
       placeholderMessage: "Pesan kamu",
       button: "Kirim Pesan",
       phoneLabel: "081387613515",
-      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Web Developer & IT Support",
       description:
-        "Beralamat di Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
+        "Beralamat di Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",
@@ -280,7 +280,7 @@ export const translations = {
       viewProjects: "View Projects",
       contact: "Contact Me",
       downloadCV: "Download CV",
-      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
       availability: "Available for web & IT support roles",
       stats: {
         focusValue: "4+",
@@ -312,7 +312,7 @@ export const translations = {
       personalDetails: [
         {
           label: "Address",
-          value: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+          value: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
         },
         {
           label: "Hobbies",
@@ -497,13 +497,13 @@ export const translations = {
       placeholderMessage: "Your message",
       button: "Send Message",
       phoneLabel: "081387613515",
-      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
+      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Web Developer & IT Support",
       description:
-        "Based at Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004. Available for web development, dashboards, automation, and IT support roles.",
+        "Based at Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Available for web development, dashboards, automation, and IT support roles.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",
