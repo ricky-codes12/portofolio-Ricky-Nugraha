@@ -16,14 +16,14 @@ export const translations = {
       closeMenu: "Tutup menu",
     },
     hero: {
-      label: "Halo, saya",
+      label: "Hello",
       role: "Web Developer",
       description:
         "Lulusan Teknik Informatika yang membangun website modern, dashboard analytics, otomasi data scraping, dan solusi IT support yang rapi untuk kebutuhan bisnis.",
       viewProjects: "Lihat Proyek",
       contact: "Hubungi Saya",
       downloadCV: "Download CV",
-      location: "Jagakarsa, Jakarta Selatan",
+      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
       availability: "Tersedia untuk peran web & IT support",
       stats: {
         focusValue: "4+",
@@ -55,7 +55,7 @@ export const translations = {
       personalDetails: [
         {
           label: "Alamat",
-          value: "Jagakarsa, Gg. H. Naiman, Jakarta Selatan",
+          value: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
         },
         {
           label: "Hobi",
@@ -240,13 +240,13 @@ export const translations = {
       placeholderMessage: "Pesan kamu",
       button: "Kirim Pesan",
       phoneLabel: "081387613515",
-      location: "Jagakarsa, Jakarta Selatan",
+      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Web Developer & IT Support",
       description:
-        "Berbasis di Jagakarsa, Jakarta Selatan. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
+        "Beralamat di Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",
@@ -273,14 +273,14 @@ export const translations = {
       closeMenu: "Close menu",
     },
     hero: {
-      label: "Hello, I'm",
+      label: "Hello",
       role: "Web Developer",
       description:
         "An Informatics graduate building modern websites, analytics dashboards, data scraping automation, and clean IT support solutions for business needs.",
       viewProjects: "View Projects",
       contact: "Contact Me",
       downloadCV: "Download CV",
-      location: "Jagakarsa, South Jakarta",
+      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
       availability: "Available for web & IT support roles",
       stats: {
         focusValue: "4+",
@@ -312,7 +312,7 @@ export const translations = {
       personalDetails: [
         {
           label: "Address",
-          value: "Jagakarsa, Gg. H. Naiman, South Jakarta",
+          value: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
         },
         {
           label: "Hobbies",
@@ -497,13 +497,13 @@ export const translations = {
       placeholderMessage: "Your message",
       button: "Send Message",
       phoneLabel: "081387613515",
-      location: "Jagakarsa, South Jakarta",
+      location: "Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Web Developer & IT Support",
       description:
-        "Based in Jagakarsa, South Jakarta. Available for web development, dashboards, automation, and IT support roles.",
+        "Based at Jln, M.Kahfi 1 Gg. Amsar No 4 RT:004/rw:004. Available for web development, dashboards, automation, and IT support roles.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",
