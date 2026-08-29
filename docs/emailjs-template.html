@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pesan baru dari portfolio</title>
+  </head>
+  <body style="margin:0;background:#eef2f6;font-family:Arial,Helvetica,sans-serif;color:#172033">
+    <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#eef2f6;padding:32px 12px">
+      <tr>
+        <td align="center">
+          <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:620px;background:#ffffff;border:1px solid #dce4ec;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(15,23,42,.10)">
+            <tr>
+              <td style="padding:28px 32px;background:linear-gradient(135deg,#0e7490,#4f46e5);color:#ffffff">
+                <div style="font-size:12px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;opacity:.82">Ricky Nugraha Portfolio</div>
+                <h1 style="margin:8px 0 0;font-size:25px;line-height:1.25">Ada pesan baru untuk kamu</h1>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:30px 32px">
+                <p style="margin:0 0 22px;color:#526077;font-size:15px;line-height:1.65">Seseorang mengirim pesan melalui form kontak di website portfolio kamu.</p>
+
+                <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border-collapse:separate;border-spacing:0 10px">
+                  <tr>
+                    <td style="width:96px;color:#6b778c;font-size:13px;font-weight:700;vertical-align:top">Nama</td>
+                    <td style="color:#172033;font-size:15px;font-weight:700">{{from_name}}</td>
+                  </tr>
+                  <tr>
+                    <td style="width:96px;color:#6b778c;font-size:13px;font-weight:700;vertical-align:top">Email</td>
+                    <td style="font-size:15px"><a href="mailto:{{from_email}}" style="color:#0e7490;text-decoration:none;font-weight:700">{{from_email}}</a></td>
+                  </tr>
+                </table>
+
+                <div style="margin:20px 0 24px;padding:20px;border:1px solid #dce4ec;border-radius:14px;background:#f8fafc">
+                  <div style="margin-bottom:9px;color:#6b778c;font-size:12px;font-weight:700;letter-spacing:.7px;text-transform:uppercase">Isi pesan</div>
+                  <div style="color:#263247;font-size:15px;line-height:1.75;white-space:pre-wrap">{{message}}</div>
+                </div>
+
+                <a href="mailto:{{reply_to}}?subject=Re:%20Pesan%20dari%20portfolio" style="display:inline-block;padding:13px 20px;border-radius:10px;background:#0e7490;color:#ffffff;font-size:14px;font-weight:700;text-decoration:none">Balas pengirim</a>
+              </td>
+            </tr>
+            <tr>
+              <td style="padding:18px 32px;border-top:1px solid #e5eaf0;background:#f8fafc;color:#7a8699;font-size:12px;line-height:1.6">
+                Email ini dibuat otomatis oleh form kontak portfolio Ricky Nugraha. Jangan membalas alamat pengirim layanan EmailJS; gunakan tombol “Balas pengirim”.
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

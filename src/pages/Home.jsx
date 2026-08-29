@@ -7,15 +7,16 @@ import Experience from "../components/Experience";
 import Certificates from "../components/Certificates";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import PortfolioChat from "../components/PortfolioChat";
 
-function Home({ theme, onToggleTheme, language, onToggleLanguage }) {
+function Home({ theme, onToggleTheme, language, onChangeLanguage }) {
   return (
     <>
       <Navbar
         theme={theme}
         onToggleTheme={onToggleTheme}
         language={language}
-        onToggleLanguage={onToggleLanguage}
+        onChangeLanguage={onChangeLanguage}
       />
       <main>
         <Hero language={language} />
@@ -27,6 +28,7 @@ function Home({ theme, onToggleTheme, language, onToggleLanguage }) {
         <Contact language={language} />
       </main>
       <Footer language={language} />
+      <PortfolioChat key={language} language={language} />
     </>
   );
 }

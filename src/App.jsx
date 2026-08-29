@@ -15,8 +15,8 @@ function App() {
   const [language, setLanguage] = useState(() => {
     const savedLanguage = localStorage.getItem("portfolio-lang");
 
-    if (savedLanguage === "en") {
-      return "en";
+    if (["id", "en", "zh", "ar"].includes(savedLanguage)) {
+      return savedLanguage;
     }
 
     return "id";
@@ -29,6 +29,8 @@ function App() {
 
   useEffect(() => {
     localStorage.setItem("portfolio-lang", language);
+    document.documentElement.lang = language === "zh" ? "zh-CN" : language;
+    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
   }, [language]);
 
   useEffect(() => {
@@ -57,16 +59,12 @@ function App() {
     setTheme((currentTheme) => (currentTheme === "dark" ? "light" : "dark"));
   };
 
-  const toggleLanguage = () => {
-    setLanguage((currentLanguage) => (currentLanguage === "id" ? "en" : "id"));
-  };
-
   return (
     <Home
       theme={theme}
       onToggleTheme={toggleTheme}
       language={language}
-      onToggleLanguage={toggleLanguage}
+      onChangeLanguage={setLanguage}
     />
   );
 }

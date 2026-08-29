@@ -1,3 +1,5 @@
+import { createExtraTranslations } from "./locales-extra";
+
 export const translations = {
   id: {
     nav: {
@@ -17,26 +19,26 @@ export const translations = {
     },
     hero: {
       label: "Hello",
-      role: "Web Developer",
+      role: "Software Engineer",
       description:
-        "Lulusan Teknik Informatika yang membangun website modern, dashboard analytics, otomasi data scraping, dan solusi IT support yang rapi untuk kebutuhan bisnis.",
+        "Software Engineer yang mengembangkan aplikasi web dan AI, dashboard analytics, otomasi data, serta solusi digital untuk kebutuhan bisnis.",
       viewProjects: "Lihat Proyek",
       contact: "Hubungi Saya",
       downloadCV: "Download CV",
       location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
-      availability: "Tersedia untuk peran web & IT support",
+      availability: "Software Engineer — Web & AI",
       stats: {
         focusValue: "4+",
         focusLabel: "Fokus proyek",
         techValue: "15",
         techLabel: "Tech stack",
-        hybridValue: "Web + IT",
+        hybridValue: "Web + AI",
         hybridLabel: "Keahlian hibrid",
       },
       badgeTop: "Web",
       badgeTopDesc: "React, SASS, GSAP",
-      badgeBottom: "IT Support",
-      badgeBottomDesc: "Troubleshooting & Office 365",
+      badgeBottom: "AI Engineering",
+      badgeBottomDesc: "RAG, LLM & AI Agents",
     },
     about: {
       eyebrow: "Tentang Saya",
@@ -78,7 +80,7 @@ export const translations = {
         {
           title: "Front-End Development",
           desc: "Membangun website responsif dengan UI modern dan mudah digunakan.",
-          items: ["React JS", "Vue JS", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
+          items: ["React JS", "Vue JS", "Svelte", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
         },
         {
           title: "Back-End & Data",
@@ -87,8 +89,8 @@ export const translations = {
         },
         {
           title: "Tools, Deployment & IT Support",
-          desc: "Menjaga workflow development, deployment, perangkat, dan support teknis.",
-          items: ["Laragon", "Ngrok", "Git", "GitHub", "Vercel", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
+          desc: "Menjaga workflow development, deployment, perangkat, serta mempercepat pekerjaan dengan AI-assisted development.",
+          items: ["Linux", "Docker", "Laragon", "Ngrok", "Git", "GitHub", "Vercel", "Cloud Platforms", "ChatGPT", "Codex", "AI Agents", "Vibe Coding", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
         },
         {
           title: "Soft Skills",
@@ -173,6 +175,12 @@ export const translations = {
           company: "PT Resvara Balawan Prakasa",
           desc: "Mengembangkan dan mengelola website company profile perusahaan secara mandiri mulai dari perancangan hingga deployment. Mengembangkan sistem berbasis web menggunakan Front-End dan Back-End technology. Melakukan maintenance dan troubleshooting perangkat seperti printer Brother MFC-T4500DW, Brother DCP-T720DW, dan Epson L4150. Memberikan dukungan teknis (IT Support) kepada rekan kerja terkait kendala perangkat laptop, software, dan jaringan dasar. Memastikan website responsive dan dapat digunakan dengan baik di berbagai perangkat. Membantu pengelolaan database dan sistem internal perusahaan. Melakukan perbaikan bug dan maintenance website perusahaan.",
         },
+        {
+          period: "Jun 2026 - Sekarang",
+          role: "Junior Software Engineer AI",
+          company: "PT Hexacode Teknologi Indonesia",
+          desc: "Mengembangkan Web AI versi 1 dan versi 2 serta melakukan eksperimen SLIK RAG dan fine-tuning menggunakan 500, 10.000, hingga 100.000 data untuk mengevaluasi kualitas respons LLM. Mengembangkan prototype AI Data Crawler dengan dummy data sebagai persiapan pipeline AI. Mengeksplorasi pengembangan aplikasi berbantuan AI melalui Hexa.Build / Hexa Chat dan Change Proposal. Melakukan riset kemampuan, keterbatasan, serta behavior LLM, sekaligus eksperimen integrasi Hexa v1 API untuk kebutuhan QNB. Terbiasa menggunakan AI agent seperti ChatGPT dan Codex serta cloud platform untuk mempercepat pekerjaan melalui workflow vibe coding.",
+        },
       ],
     },
     certificates: {
@@ -239,12 +247,19 @@ export const translations = {
       placeholderEmail: "Email kamu",
       placeholderMessage: "Pesan kamu",
       button: "Kirim Pesan",
+      sending: "Mengirim...",
+      statusSuccess: "Pesan berhasil dikirim. Saya akan membalas melalui email kamu.",
+      statusError: "Pesan gagal dikirim. Silakan coba lagi atau hubungi saya melalui email.",
+      statusConfig: "Form kontak sedang belum aktif. Silakan hubungi saya melalui email.",
+      toastSuccess: "Pesan terkirim",
+      toastAttention: "Pengiriman belum berhasil",
+      toastClose: "Tutup notifikasi",
       phoneLabel: "081387613515",
       location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
     },
     footer: {
       brand: "Ricky Nugraha",
-      title: "Web Developer & IT Support",
+      title: "Software Engineer — Web & AI",
       description:
         "Beralamat di Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
       socials: {
@@ -274,26 +289,26 @@ export const translations = {
     },
     hero: {
       label: "Hello",
-      role: "Web Developer",
+      role: "Software Engineer",
       description:
-        "An Informatics graduate building modern websites, analytics dashboards, data scraping automation, and clean IT support solutions for business needs.",
+        "A Software Engineer developing web and AI applications, analytics dashboards, data automation, and digital solutions for business needs.",
       viewProjects: "View Projects",
       contact: "Contact Me",
       downloadCV: "Download CV",
       location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
-      availability: "Available for web & IT support roles",
+      availability: "Software Engineer — Web & AI",
       stats: {
         focusValue: "4+",
         focusLabel: "Project focus",
         techValue: "15",
         techLabel: "Tech stack",
-        hybridValue: "Web + IT",
+        hybridValue: "Web + AI",
         hybridLabel: "Hybrid skillset",
       },
       badgeTop: "Web",
       badgeTopDesc: "React, SASS, GSAP",
-      badgeBottom: "IT Support",
-      badgeBottomDesc: "Troubleshooting & Office 365",
+      badgeBottom: "AI Engineering",
+      badgeBottomDesc: "RAG, LLM & AI Agents",
     },
     about: {
       eyebrow: "About Me",
@@ -335,7 +350,7 @@ export const translations = {
         {
           title: "Front-End Development",
           desc: "Building responsive websites with modern and user-friendly interfaces.",
-          items: ["React JS", "Vue JS", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
+          items: ["React JS", "Vue JS", "Svelte", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
         },
         {
           title: "Back-End & Data",
@@ -344,8 +359,8 @@ export const translations = {
         },
         {
           title: "Tools, Deployment & IT Support",
-          desc: "Supporting development workflows, deployment, devices, and technical operations.",
-          items: ["Laragon", "Ngrok", "Git", "GitHub", "Vercel", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
+          desc: "Supporting development, deployment, and technical workflows while accelerating delivery through AI-assisted development.",
+          items: ["Linux", "Docker", "Laragon", "Ngrok", "Git", "GitHub", "Vercel", "Cloud Platforms", "ChatGPT", "Codex", "AI Agents", "Vibe Coding", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
         },
         {
           title: "Soft Skills",
@@ -430,6 +445,12 @@ export const translations = {
           company: "PT Resvara Balawan Prakasa",
           desc: "Developed and managed the company's company profile website independently from planning to deployment. Built web systems using front-end and back-end technology. Performed maintenance and troubleshooting for devices such as Brother MFC-T4500DW, Brother DCP-T720DW, and Epson L4150 printers. Provided technical support (IT Support) to coworkers regarding laptop, software, and basic network issues. Ensured the website was responsive and worked well across different devices. Helped manage the company's internal database and systems. Performed bug fixes and website maintenance.",
         },
+        {
+          period: "Jun 2026 - Present",
+          role: "Junior Software Engineer AI",
+          company: "PT Hexacode Teknologi Indonesia",
+          desc: "Developing Web AI versions 1 and 2 while conducting SLIK RAG and fine-tuning experiments with datasets ranging from 500 and 10,000 to 100,000 records to evaluate LLM response quality. Developing an AI Data Crawler prototype with dummy data in preparation for an AI pipeline. Exploring AI-assisted application development through Hexa.Build / Hexa Chat and Change Proposals. Researching LLM capabilities, limitations, and behavior while experimenting with Hexa v1 API integration for QNB requirements. Regularly using AI agents such as ChatGPT and Codex alongside cloud platforms to accelerate delivery through a vibe-coding workflow.",
+        },
       ],
     },
     certificates: {
@@ -496,12 +517,19 @@ export const translations = {
       placeholderEmail: "Your email",
       placeholderMessage: "Your message",
       button: "Send Message",
+      sending: "Sending...",
+      statusSuccess: "Your message was sent successfully. I will reply to your email.",
+      statusError: "The message could not be sent. Please try again or contact me by email.",
+      statusConfig: "The contact form is not active yet. Please contact me by email.",
+      toastSuccess: "Message sent",
+      toastAttention: "Message not sent",
+      toastClose: "Close notification",
       phoneLabel: "081387613515",
       location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
     },
     footer: {
       brand: "Ricky Nugraha",
-      title: "Web Developer & IT Support",
+      title: "Software Engineer — Web & AI",
       description:
         "Based at Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Available for web development, dashboards, automation, and IT support roles.",
       socials: {
@@ -514,5 +542,7 @@ export const translations = {
     },
   },
 };
+
+Object.assign(translations, createExtraTranslations(translations.en));
 
 export const getTranslations = (language) => translations[language] || translations.id;

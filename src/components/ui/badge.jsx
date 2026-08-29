@@ -8,7 +8,7 @@ const badgeVariants = cva(
     variants: {
       variant: {
         default: "border-transparent bg-[var(--brand)] text-white",
-        secondary: "border-[var(--line)] bg-white/80 text-[var(--ink)]",
+        secondary: "border-[var(--line)] bg-[var(--panel)] text-[var(--ink)]",
         outline: "text-[var(--ink)] border-[var(--line)] bg-transparent",
       },
     },
@@ -27,4 +27,4 @@ function Badge({ className, variant, ...props }) {
   );
 }
 
-export { Badge, badgeVariants };
+export { Badge };
