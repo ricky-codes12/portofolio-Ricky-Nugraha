@@ -25,7 +25,8 @@ export const translations = {
       viewProjects: "Lihat Proyek",
       contact: "Hubungi Saya",
       downloadCV: "Download CV",
-      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+      viewCV: "Lihat CV",
+      location: "Jakarta Selatan, Indonesia",
       availability: "Software Engineer — Web & AI",
       stats: {
         focusValue: "4+",
@@ -49,15 +50,15 @@ export const translations = {
         "Saya menggabungkan kemampuan frontend, pengelolaan data, dan IT support untuk menyelesaikan masalah teknis dari sisi produk maupun operasional.",
       profileTitle: "Profil Singkat",
       profileText:
-        "Saya Ricky Nugraha, lulusan Teknik Informatika yang memiliki minat pada pengembangan website, dashboard analytics, data scraping, serta IT support dan troubleshooting.",
+        "Saya Ricky Nugraha, lulusan Teknik Informatika dengan pengalaman pengembangan web fullstack, aplikasi AI, dan IT support. Saya mengembangkan website perusahaan, sistem ERP, dashboard data, serta chatbot yang terintegrasi dengan aplikasi web. Pengalaman saya juga mencakup deployment dan setup infrastruktur server berbasis Linux Ubuntu.",
       careerTitle: "Fokus Karier",
       careerText:
-        "Saya terbiasa belajar teknologi baru, bekerja secara terstruktur, dan mampu bekerja secara individu maupun tim untuk memberikan solusi terbaik bagi perusahaan.",
+        "Saya berfokus pada pengembangan software dan integrasi AI untuk kebutuhan bisnis, dari antarmuka dan backend hingga deployment. Saya terbiasa mengerjakan proyek secara mandiri, berkolaborasi dengan tim, serta memecahkan masalah teknis. Pengalaman di bidang data, administrasi, dan IT support membantu saya memahami kebutuhan pengguna dan operasional.",
       personalTitle: "Info Personal",
       personalDetails: [
         {
           label: "Alamat",
-          value: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+          value: "Jakarta Selatan, Indonesia",
         },
         {
           label: "Hobi",
@@ -78,25 +79,110 @@ export const translations = {
       title: "Skills",
       groups: [
         {
-          title: "Front-End Development",
-          desc: "Membangun website responsif dengan UI modern dan mudah digunakan.",
-          items: ["React JS", "Vue JS", "Svelte", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
+          "title": "Front-End Development",
+          "desc": "Membangun antarmuka responsif untuk website perusahaan, dashboard, dan aplikasi web.",
+          "items": [
+            "React JS",
+            "JavaScript",
+            "TypeScript",
+            "Vue JS",
+            "Svelte",
+            "HTML",
+            "CSS",
+            "Sass",
+            "Tailwind CSS",
+            "Responsive Web Design",
+            "GSAP"
+          ]
         },
         {
-          title: "Back-End & Data",
-          desc: "Mengelola API, database, dashboard, scraping, dan pemrosesan data.",
-          items: ["Laravel", "REST API", "MySQL", "Supabase", "Web Analytics Dashboard", "Data Scraping", "Data Processing"],
+          "title": "Back-End & Deployment",
+          "desc": "Mengembangkan backend, mengintegrasikan API dan database, serta menangani deployment dan pemeliharaan aplikasi.",
+          "items": [
+            "Laravel",
+            "Node.js (Fundamentals)",
+            "REST API",
+            "API Integration",
+            "MySQL",
+            "Supabase",
+            "Git",
+            "GitHub",
+            "Docker",
+            "Vercel",
+            "Cloud Platforms",
+            "Laragon",
+            "Ngrok",
+            "Debugging",
+            "Website Maintenance"
+          ]
         },
         {
-          title: "Tools, Deployment & IT Support",
-          desc: "Menjaga workflow development, deployment, perangkat, serta mempercepat pekerjaan dengan AI-assisted development.",
-          items: ["Linux", "Docker", "Laragon", "Ngrok", "Git", "GitHub", "Vercel", "Cloud Platforms", "ChatGPT", "Codex", "AI Agents", "Vibe Coding", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
+          "title": "AI Engineering",
+          "desc": "Mengembangkan chatbot dan integrasi AI, mengevaluasi respons LLM, serta bereksperimen dengan RAG dan fine-tuning.",
+          "items": [
+            "Chatbot Development",
+            "RAG",
+            "LLM Evaluation",
+            "Fine-tuning Experiments",
+            "AI Data Crawler Prototyping",
+            "ChatGPT",
+            "Codex",
+            "AI Agents",
+            "AI-Assisted Development (Vibe Coding)"
+          ]
         },
         {
-          title: "Soft Skills",
-          desc: "Kemampuan kerja profesional untuk kolaborasi dan penyelesaian masalah.",
-          items: ["Problem Solving", "Team Collaboration", "Communication Skills", "Time Management", "Adaptability", "Fast Learner", "Attention to Detail", "Critical Thinking", "Responsible", "Disciplined"],
+          "title": "Infrastructure & IT Support",
+          "desc": "Menyiapkan server Dell PowerEdge R620 dengan iDRAC7 Enterprise dan Ubuntu 22.04.3 LTS, serta menangani dukungan perangkat dan sistem.",
+          "items": [
+            "Server Setup",
+            "Dell PowerEdge R620",
+            "iDRAC7 Enterprise",
+            "Linux Ubuntu",
+            "IT Support",
+            "Hardware Installation",
+            "Software Installation",
+            "Boot Troubleshooting",
+            "Printer Maintenance",
+            "Basic Networking",
+            "Mikrotik",
+            "Cisco"
+          ]
         },
+        {
+          "title": "Data & Administration",
+          "desc": "Mengolah dan memvisualisasikan data, menggunakan Excel, serta mendukung pencatatan dan administrasi operasional.",
+          "items": [
+            "Python",
+            "Streamlit",
+            "Data Visualization",
+            "Power BI",
+            "Scikit-learn (Fundamentals)",
+            "TensorFlow (Fundamentals)",
+            "Data Scraping",
+            "Data Processing",
+            "Microsoft Excel",
+            "Data Entry",
+            "Microsoft Office",
+            "Office 365"
+          ]
+        },
+        {
+          "title": "Soft Skills",
+          "desc": "Menyelesaikan masalah teknis, mengerjakan proyek secara mandiri, berkolaborasi, dan menjaga ketelitian pekerjaan.",
+          "items": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Independent Project Delivery",
+            "Team Collaboration",
+            "Technical Communication",
+            "Time Management",
+            "Adaptability",
+            "Continuous Learning",
+            "Attention to Detail",
+            "Responsibility"
+          ]
+        }
       ],
     },
     projects: {
@@ -108,6 +194,8 @@ export const translations = {
           desc: "Frontend sistem finance untuk mengelola kebutuhan administrasi dan monitoring transaksi.",
           type: "Aplikasi finance",
           metric: "Dashboard operasional",
+          contribution: "Mengembangkan frontend secara mandiri, termasuk formulir pembiayaan, daftar kontrak, serta tampilan ringkasan tagihan dan denda.",
+          outcome: "Input data klien, OTR, uang muka, tenor, dan tanggal angsuran tersedia dalam satu tampilan bersama daftar kontrak dan ringkasan pembiayaan.",
           tech: ["React", "Vercel", "SASS"],
           demoUrl: "https://ims-finance-frontend.vercel.app/",
         },
@@ -116,6 +204,8 @@ export const translations = {
           desc: "Website company profile modern dengan tampilan responsif dan informasi bisnis yang jelas.",
           type: "Company profile",
           metric: "Kehadiran bisnis",
+          contribution: "Merancang, mengembangkan, melakukan deployment, dan memelihara website perusahaan secara mandiri, dari penyajian informasi bisnis hingga navigasi layanan.",
+          outcome: "Website publik menyajikan profil, layanan, portofolio, karier, dan kontak perusahaan, dengan ajakan konsultasi serta penjadwalan survei.",
           tech: ["React", "CSS", "SASS"],
           demoUrl: "https://company-profile-teal-eta.vercel.app/",
         },
@@ -124,6 +214,8 @@ export const translations = {
           desc: "Dashboard analisis data bike sharing untuk membaca pola penggunaan dan performa layanan.",
           type: "Data analytics",
           metric: "Dashboard insight",
+          contribution: "Mengembangkan dashboard secara mandiri menggunakan Python dan Streamlit, termasuk filter tanggal, ringkasan data, dan visualisasi penyewaan sepeda.",
+          outcome: "Total penyewaan, rata-rata per jam, jumlah hari terdata, dan grafik penyewaan menurut cuaca dapat ditinjau dalam satu dashboard.",
           tech: ["Python", "Streamlit", "Data Viz"],
           demoUrl: "https://bike-sharing-dashboard-qjornwxhtakibwxwqpd9ho.streamlit.app/",
         },
@@ -132,6 +224,8 @@ export const translations = {
           desc: "Platform digital untuk pemajuan budaya Nusantara.",
           type: "Platform konten",
           metric: "Arsip budaya",
+          contribution: "Mengembangkan website secara mandiri, termasuk halaman utama, penyajian visual destinasi, dan navigasi kategori konten Nusantara.",
+          outcome: "Halaman utama memperkenalkan platform dan menyediakan navigasi menuju pariwisata, lingkungan, hidden gem, serta favorit.",
           tech: ["JavaScript", "React", "Vercel"],
           demoUrl: "https://capstone-warisan-nusantara.vercel.app/#/",
         },
@@ -140,12 +234,57 @@ export const translations = {
           desc: "Sistem ERP sederhana untuk membantu alur kerja operasional dan manajemen data perusahaan.",
           type: "ERP",
           metric: "Manajemen operasional",
+          contribution: "Mengembangkan proyek ERP secara mandiri, termasuk antarmuka masuk dengan identitas perusahaan, kolom kredensial, dan kontrol visibilitas password.",
+          outcome: "Halaman masuk menyediakan input email dan password, opsi ingat saya, serta navigasi pendaftaran dan pemulihan password.",
           tech: ["React", "Vercel", "SASS"],
           demoUrl: "https://erp-management-system-five.vercel.app/login",
         },
       ],
+      contributionLabel: "Kontribusi Saya",
+      outcomeLabel: "Hasil Konkret",
       code: "Kode",
       demo: "Demo",
+    },
+    education: {
+      "eyebrow": "Pendidikan",
+      "title": "Pendidikan & Pelatihan",
+      "groups": [
+        {
+          "title": "Pendidikan Formal",
+          "items": [
+            {
+              "institution": "Universitas Indraprasta PGRI (UNINDRA)",
+              "period": "2020–2024",
+              "detail": "S1 Teknik Informatika · IPK 3,60/4,00"
+            },
+            {
+              "institution": "SMK Kemala Bhayangkari Delog",
+              "period": "2017–2020",
+              "detail": "Teknik Komputer dan Jaringan (TKJ)"
+            }
+          ]
+        },
+        {
+          "title": "Pelatihan",
+          "items": [
+            {
+              "institution": "Dicoding Bootcamp Batch 9",
+              "period": "Agu 2025–Jan 2026",
+              "detail": "Data Science & Machine Learning"
+            },
+            {
+              "institution": "BuildWithAngga",
+              "period": "2025",
+              "detail": "Data Analysis & Power BI"
+            },
+            {
+              "institution": "Studi Independen MSIB Batch 6",
+              "period": "Feb–Jun 2024",
+              "detail": "Frontend Web Development"
+            }
+          ]
+        }
+      ]
     },
     experience: {
       eyebrow: "Perjalanan",
@@ -153,33 +292,33 @@ export const translations = {
       items: [
         {
           period: "Jan 2020 - Mar 2020",
-          role: "Magang",
+          role: "Teknisi Komputer (Magang)",
           company: "Giant Computer",
-          desc: "Melakukan instalasi software dan perakitan PC. Memberikan dukungan teknis terhadap perangkat keras dan perangkat lunak untuk memastikan kinerja sistem berjalan optimal.",
+          desc: "Melakukan instalasi software, perakitan PC, serta pemasangan dan pemeriksaan hardware komputer maupun laptop. Menangani kendala booting, troubleshooting perangkat keras dan perangkat lunak, serta membantu pemulihan akses laptop ketika pengguna lupa password.",
         },
         {
           period: "Jan 2024 - Jun 2024",
           role: "Freelance Data Entry",
           company: "DPRD Jakarta Selatan",
-          desc: "Bertanggung jawab untuk input data pemilu, menemani sosialisasi, serta mengontrol pekerjaan pengaspalan dan saluran air. Membuat visualisasi data pemilu, memecahkan masalah, dan mendukung kegiatan administrasi dengan efisien.",
+          desc: "Mengelola input dan pengolahan data pemilu serta menyusun visualisasi untuk merangkum informasi dan memudahkan peninjauan data. Menyajikan data dalam bentuk yang lebih mudah dipahami untuk mendukung pelaporan dan kebutuhan administrasi. Mendukung kegiatan sosialisasi serta pemantauan pekerjaan pengaspalan dan saluran air.",
         },
         {
           period: "Mar 2025 - Jan 2026",
           role: "IT Support",
           company: "PT Tigris",
-          desc: "Melakukan input data transaksi keluar-masuk botol dan produksi secara akurat. Menginstal software dan memastikan perangkat komputer berfungsi dengan baik. Memperbaiki printer jika terjadi kendala, termasuk penggantian cartridge dan perawatan rutin. Menjaga kelancaran operasional sistem IT serta mendukung kegiatan administrasi harian.",
+          desc: "Memberikan dukungan teknis harian untuk komputer, software, dan printer guna menunjang operasional perusahaan. Melakukan instalasi software, pemeriksaan perangkat, serta troubleshooting kendala hardware dan software. Menggunakan Linux Ubuntu dalam pekerjaan IT Support, serta menangani perawatan printer dan penggantian cartridge. Turut mendukung pencatatan data transaksi dan produksi untuk kebutuhan administrasi.",
         },
         {
           period: "Feb 2026 - Jun 2026",
-          role: "Web Developer",
+          role: "Fullstack Developer",
           company: "PT Resvara Balawan Prakasa",
-          desc: "Mengembangkan dan mengelola website company profile perusahaan secara mandiri mulai dari perancangan hingga deployment. Mengembangkan sistem berbasis web menggunakan Front-End dan Back-End technology. Melakukan maintenance dan troubleshooting perangkat seperti printer Brother MFC-T4500DW, Brother DCP-T720DW, dan Epson L4150. Memberikan dukungan teknis (IT Support) kepada rekan kerja terkait kendala perangkat laptop, software, dan jaringan dasar. Memastikan website responsive dan dapat digunakan dengan baik di berbagai perangkat. Membantu pengelolaan database dan sistem internal perusahaan. Melakukan perbaikan bug dan maintenance website perusahaan.",
+          desc: "Mengembangkan website company profile dan sistem ERP perusahaan secara mandiri, mulai dari perancangan, pengembangan frontend dan backend, hingga deployment. Membangun antarmuka responsif, mengelola integrasi data, serta membantu pengelolaan database dan sistem internal perusahaan. Melakukan debugging, perbaikan bug, dan maintenance agar aplikasi tetap dapat digunakan dengan baik. Turut memberikan dukungan IT untuk kendala perangkat, software, printer, dan jaringan dasar.",
         },
         {
-          period: "Jun 2026 - Sekarang",
+          period: "Jun 2026 - Sep 2026",
           role: "Junior Software Engineer AI",
           company: "PT Hexacode Teknologi Indonesia",
-          desc: "Mengembangkan Web AI versi 1 dan versi 2 serta melakukan eksperimen SLIK RAG dan fine-tuning menggunakan 500, 10.000, hingga 100.000 data untuk mengevaluasi kualitas respons LLM. Mengembangkan prototype AI Data Crawler dengan dummy data sebagai persiapan pipeline AI. Mengeksplorasi pengembangan aplikasi berbantuan AI melalui Hexa.Build / Hexa Chat dan Change Proposal. Melakukan riset kemampuan, keterbatasan, serta behavior LLM, sekaligus eksperimen integrasi Hexa v1 API untuk kebutuhan QNB. Terbiasa menggunakan AI agent seperti ChatGPT dan Codex serta cloud platform untuk mempercepat pekerjaan melalui workflow vibe coding.",
+          desc: "Mengembangkan aplikasi Web AI versi 1 dan 2 serta membangun chatbot Hexaacode yang terintegrasi dengan Hexa-v2. Melakukan setup infrastruktur server Dell PowerEdge R620, iDRAC7 Enterprise, dan Ubuntu 22.04.3 LTS. Melakukan eksperimen SLIK berbasis RAG dan fine-tuning dengan dataset 500 hingga 100.000 data untuk mengevaluasi kualitas respons LLM. Mengembangkan prototipe AI Data Crawler menggunakan dummy data untuk persiapan pipeline AI. Mengeksplorasi pengembangan aplikasi melalui Hexa.Build / Hexa Chat dan Change Proposal, serta menguji integrasi Hexa v1 API untuk kebutuhan QNB. Melakukan riset kemampuan, keterbatasan, dan perilaku LLM, dengan dukungan ChatGPT, Codex, AI agent, dan cloud platform dalam proses pengembangan.",
         },
       ],
     },
@@ -255,13 +394,13 @@ export const translations = {
       toastAttention: "Pengiriman belum berhasil",
       toastClose: "Tutup notifikasi",
       phoneLabel: "081387613515",
-      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+      location: "Jakarta Selatan, Indonesia",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Software Engineer — Web & AI",
       description:
-        "Beralamat di Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
+        "Beralamat di Jakarta Selatan, Indonesia. Tersedia untuk pengembangan web, dashboard, automasi, dan peran IT support.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",
@@ -295,7 +434,8 @@ export const translations = {
       viewProjects: "View Projects",
       contact: "Contact Me",
       downloadCV: "Download CV",
-      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+      viewCV: "View CV",
+      location: "Jakarta Selatan, Indonesia",
       availability: "Software Engineer — Web & AI",
       stats: {
         focusValue: "4+",
@@ -319,15 +459,15 @@ export const translations = {
         "I combine frontend development, data handling, and IT support to solve technical problems from both product and operations sides.",
       profileTitle: "Profile",
       profileText:
-        "I’m Ricky Nugraha, an Informatics graduate with a passion for website development, analytics dashboards, data scraping, and IT support and troubleshooting.",
+        "I’m Ricky Nugraha, an Informatics graduate with experience in fullstack web development, AI applications, and IT support. I develop company websites, ERP systems, data dashboards, and chatbots integrated with web applications. My experience also includes deployment and Linux Ubuntu server infrastructure setup.",
       careerTitle: "Career Focus",
       careerText:
-        "I enjoy learning new technologies, working in a structured way, and collaborating effectively to deliver the best solutions for the company.",
+        "I focus on software development and AI integration for business needs, from interfaces and backends to deployment. I work independently on projects, collaborate with teams, and solve technical problems. My background in data, administration, and IT support helps me understand user and operational needs.",
       personalTitle: "Personal Info",
       personalDetails: [
         {
           label: "Address",
-          value: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+          value: "Jakarta Selatan, Indonesia",
         },
         {
           label: "Hobbies",
@@ -348,25 +488,110 @@ export const translations = {
       title: "Skills",
       groups: [
         {
-          title: "Front-End Development",
-          desc: "Building responsive websites with modern and user-friendly interfaces.",
-          items: ["React JS", "Vue JS", "Svelte", "TypeScript", "HTML", "CSS", "Sass", "Tailwind CSS"],
+          "title": "Front-End Development",
+          "desc": "Building responsive interfaces for company websites, dashboards, and web applications.",
+          "items": [
+            "React JS",
+            "JavaScript",
+            "TypeScript",
+            "Vue JS",
+            "Svelte",
+            "HTML",
+            "CSS",
+            "Sass",
+            "Tailwind CSS",
+            "Responsive Web Design",
+            "GSAP"
+          ]
         },
         {
-          title: "Back-End & Data",
-          desc: "Managing APIs, databases, dashboards, scraping, and data processing.",
-          items: ["Laravel", "REST API", "MySQL", "Supabase", "Web Analytics Dashboard", "Data Scraping", "Data Processing"],
+          "title": "Back-End & Deployment",
+          "desc": "Developing backends, integrating APIs and databases, and handling application deployment and maintenance.",
+          "items": [
+            "Laravel",
+            "Node.js (Fundamentals)",
+            "REST API",
+            "API Integration",
+            "MySQL",
+            "Supabase",
+            "Git",
+            "GitHub",
+            "Docker",
+            "Vercel",
+            "Cloud Platforms",
+            "Laragon",
+            "Ngrok",
+            "Debugging",
+            "Website Maintenance"
+          ]
         },
         {
-          title: "Tools, Deployment & IT Support",
-          desc: "Supporting development, deployment, and technical workflows while accelerating delivery through AI-assisted development.",
-          items: ["Linux", "Docker", "Laragon", "Ngrok", "Git", "GitHub", "Vercel", "Cloud Platforms", "ChatGPT", "Codex", "AI Agents", "Vibe Coding", "IT Support", "Troubleshooting", "Hardware Installation", "Software Installation", "Microsoft Office", "Office 365", "Basic Networking", "Mikrotik", "Cisco", "Website Maintenance", "Debugging"],
+          "title": "AI Engineering",
+          "desc": "Building chatbots and AI integrations, evaluating LLM responses, and experimenting with RAG and fine-tuning.",
+          "items": [
+            "Chatbot Development",
+            "RAG",
+            "LLM Evaluation",
+            "Fine-tuning Experiments",
+            "AI Data Crawler Prototyping",
+            "ChatGPT",
+            "Codex",
+            "AI Agents",
+            "AI-Assisted Development (Vibe Coding)"
+          ]
         },
         {
-          title: "Soft Skills",
-          desc: "Professional work habits for collaboration and problem solving.",
-          items: ["Problem Solving", "Team Collaboration", "Communication Skills", "Time Management", "Adaptability", "Fast Learner", "Attention to Detail", "Critical Thinking", "Responsible", "Disciplined"],
+          "title": "Infrastructure & IT Support",
+          "desc": "Setting up Dell PowerEdge R620 servers with iDRAC7 Enterprise and Ubuntu 22.04.3 LTS, and providing device and system support.",
+          "items": [
+            "Server Setup",
+            "Dell PowerEdge R620",
+            "iDRAC7 Enterprise",
+            "Linux Ubuntu",
+            "IT Support",
+            "Hardware Installation",
+            "Software Installation",
+            "Boot Troubleshooting",
+            "Printer Maintenance",
+            "Basic Networking",
+            "Mikrotik",
+            "Cisco"
+          ]
         },
+        {
+          "title": "Data & Administration",
+          "desc": "Processing and visualizing data, using Excel, and supporting operational records and administration.",
+          "items": [
+            "Python",
+            "Streamlit",
+            "Data Visualization",
+            "Power BI",
+            "Scikit-learn (Fundamentals)",
+            "TensorFlow (Fundamentals)",
+            "Data Scraping",
+            "Data Processing",
+            "Microsoft Excel",
+            "Data Entry",
+            "Microsoft Office",
+            "Office 365"
+          ]
+        },
+        {
+          "title": "Soft Skills",
+          "desc": "Solving technical problems, delivering projects independently, collaborating, and maintaining attention to detail.",
+          "items": [
+            "Problem Solving",
+            "Analytical Thinking",
+            "Independent Project Delivery",
+            "Team Collaboration",
+            "Technical Communication",
+            "Time Management",
+            "Adaptability",
+            "Continuous Learning",
+            "Attention to Detail",
+            "Responsibility"
+          ]
+        }
       ],
     },
     projects: {
@@ -378,6 +603,8 @@ export const translations = {
           desc: "A finance frontend system for managing administrative processes and transaction monitoring.",
           type: "Finance app",
           metric: "Operational dashboard",
+          contribution: "Independently developed the frontend, including financing forms, contract lists, and billing and penalty summaries.",
+          outcome: "Brings client details, vehicle price, down payment, loan term, and installment start date together with contract lists and financing summaries.",
           tech: ["React", "Vercel", "SASS"],
           demoUrl: "https://ims-finance-frontend.vercel.app/",
         },
@@ -386,6 +613,8 @@ export const translations = {
           desc: "A modern company profile website with a responsive layout and clear business messaging.",
           type: "Company profile",
           metric: "Business presence",
+          contribution: "Independently designed, developed, deployed, and maintained the company website, from business content presentation to service navigation.",
+          outcome: "Delivered a public website presenting the company profile, services, portfolio, careers, and contact information, with consultation and survey scheduling calls to action.",
           tech: ["React", "CSS", "SASS"],
           demoUrl: "https://company-profile-teal-eta.vercel.app/",
         },
@@ -394,6 +623,8 @@ export const translations = {
           desc: "A bike sharing analytics dashboard for reading usage patterns and service performance.",
           type: "Data analytics",
           metric: "Insight dashboard",
+          contribution: "Independently developed the dashboard with Python and Streamlit, including date filters, data summaries, and bike rental visualizations.",
+          outcome: "Displays total rentals, hourly averages, recorded days, and rentals by weather condition in one dashboard.",
           tech: ["Python", "Streamlit", "Data Viz"],
           demoUrl: "https://bike-sharing-dashboard-qjornwxhtakibwxwqpd9ho.streamlit.app/",
         },
@@ -402,6 +633,8 @@ export const translations = {
           desc: "A digital platform for promoting Nusantara culture.",
           type: "Content platform",
           metric: "Culture archive",
+          contribution: "Independently developed the website, including the homepage, destination visuals, and navigation across Nusantara content categories.",
+          outcome: "Delivered a homepage introducing the platform with navigation to tourism, environment, hidden gems, and favorites.",
           tech: ["JavaScript", "React", "Vercel"],
           demoUrl: "https://capstone-warisan-nusantara.vercel.app/#/",
         },
@@ -410,12 +643,57 @@ export const translations = {
           desc: "A simple ERP system to support operational workflows and internal data management.",
           type: "ERP",
           metric: "Operational management",
+          contribution: "Independently developed the ERP project, including a company-branded sign-in interface, credential fields, and password visibility controls.",
+          outcome: "Delivered a sign-in page with email and password inputs, a remember-me option, and navigation to registration and password recovery.",
           tech: ["React", "Vercel", "SASS"],
           demoUrl: "https://erp-management-system-five.vercel.app/login",
         },
       ],
+      contributionLabel: "My Contribution",
+      outcomeLabel: "Delivered",
       code: "Code",
       demo: "Demo",
+    },
+    education: {
+      "eyebrow": "Education",
+      "title": "Education & Training",
+      "groups": [
+        {
+          "title": "Formal Education",
+          "items": [
+            {
+              "institution": "Universitas Indraprasta PGRI (UNINDRA)",
+              "period": "2020–2024",
+              "detail": "Bachelor’s degree in Informatics · GPA 3.60/4.00"
+            },
+            {
+              "institution": "SMK Kemala Bhayangkari Delog",
+              "period": "2017–2020",
+              "detail": "Computer and Network Engineering"
+            }
+          ]
+        },
+        {
+          "title": "Training",
+          "items": [
+            {
+              "institution": "Dicoding Bootcamp Batch 9",
+              "period": "Aug 2025–Jan 2026",
+              "detail": "Data Science & Machine Learning"
+            },
+            {
+              "institution": "BuildWithAngga",
+              "period": "2025",
+              "detail": "Data Analysis & Power BI"
+            },
+            {
+              "institution": "Studi Independen MSIB Batch 6",
+              "period": "Feb–Jun 2024",
+              "detail": "Frontend Web Development"
+            }
+          ]
+        }
+      ]
     },
     experience: {
       eyebrow: "Journey",
@@ -423,33 +701,33 @@ export const translations = {
       items: [
         {
           period: "Jan 2020 - Mar 2020",
-          role: "Internship",
+          role: "Computer Technician Intern",
           company: "Giant Computer",
-          desc: "Installed software and assembled PCs. Provided technical support for hardware and software issues to ensure systems operated optimally.",
+          desc: "Installed software, assembled PCs, and installed and inspected desktop and laptop hardware. Troubleshot boot failures, hardware and software issues, and helped users recover access to laptops after forgetting their passwords.",
         },
         {
           period: "Jan 2024 - Jun 2024",
           role: "Freelance Data Entry",
           company: "DPRD Jakarta Selatan",
-          desc: "Responsible for election data entry, accompanying socialization activities, and monitoring road paving and water channel work. Created election data visualizations, solved problems, and supported administration efficiently.",
+          desc: "Managed election data entry and processing, and created visualizations to summarize information and make data easier to review. Presented data in an accessible format to support reporting and administrative needs. Also supported community outreach and monitoring of road paving and drainage work.",
         },
         {
           period: "Mar 2025 - Jan 2026",
           role: "IT Support",
           company: "PT Tigris",
-          desc: "Accurately entered incoming and outgoing bottle and production transaction data. Installed software and ensured computer devices were working properly. Repaired printers when issues occurred, including cartridge replacement and routine maintenance. Maintained smooth IT operations and supported daily administrative activities.",
+          desc: "Provided day-to-day technical support for computers, software, and printers to support company operations. Installed software, inspected devices, and troubleshot hardware and software issues. Used Linux Ubuntu in IT support work and handled printer maintenance and cartridge replacement. Also supported transaction and production data entry for administrative needs.",
         },
         {
           period: "Feb 2026 - Jun 2026",
-          role: "Web Developer",
+          role: "Fullstack Developer",
           company: "PT Resvara Balawan Prakasa",
-          desc: "Developed and managed the company's company profile website independently from planning to deployment. Built web systems using front-end and back-end technology. Performed maintenance and troubleshooting for devices such as Brother MFC-T4500DW, Brother DCP-T720DW, and Epson L4150 printers. Provided technical support (IT Support) to coworkers regarding laptop, software, and basic network issues. Ensured the website was responsive and worked well across different devices. Helped manage the company's internal database and systems. Performed bug fixes and website maintenance.",
+          desc: "Independently developed the company's profile website and ERP system, from planning and frontend and backend development through deployment. Built responsive interfaces, managed data integration, and supported internal database and system management. Debugged issues, fixed bugs, and maintained the applications to keep them usable. Also provided IT support for device, software, printer, and basic network issues.",
         },
         {
-          period: "Jun 2026 - Present",
+          period: "Jun 2026 - Sep 2026",
           role: "Junior Software Engineer AI",
           company: "PT Hexacode Teknologi Indonesia",
-          desc: "Developing Web AI versions 1 and 2 while conducting SLIK RAG and fine-tuning experiments with datasets ranging from 500 and 10,000 to 100,000 records to evaluate LLM response quality. Developing an AI Data Crawler prototype with dummy data in preparation for an AI pipeline. Exploring AI-assisted application development through Hexa.Build / Hexa Chat and Change Proposals. Researching LLM capabilities, limitations, and behavior while experimenting with Hexa v1 API integration for QNB requirements. Regularly using AI agents such as ChatGPT and Codex alongside cloud platforms to accelerate delivery through a vibe-coding workflow.",
+          desc: "Developing Web AI versions 1 and 2 and building the Hexaacode chatbot integrated with Hexa-v2. Setting up server infrastructure with Dell PowerEdge R620, iDRAC7 Enterprise, and Ubuntu 22.04.3 LTS. Conducting SLIK RAG and fine-tuning experiments with datasets of 500 to 100,000 records to evaluate LLM response quality. Developing an AI Data Crawler prototype with dummy data in preparation for an AI pipeline. Exploring application development through Hexa.Build / Hexa Chat and Change Proposals, and testing Hexa v1 API integration for QNB requirements. Researching LLM capabilities, limitations, and behavior, using ChatGPT, Codex, AI agents, and cloud platforms during development.",
         },
       ],
     },
@@ -525,13 +803,13 @@ export const translations = {
       toastAttention: "Message not sent",
       toastClose: "Close notification",
       phoneLabel: "081387613515",
-      location: "Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630",
+      location: "Jakarta Selatan, Indonesia",
     },
     footer: {
       brand: "Ricky Nugraha",
       title: "Software Engineer — Web & AI",
       description:
-        "Based at Jln. Mch Kahfi 1 Gg. H Amsar No 91 RT:004/ RW:004 Jakarta Selatan, Kec Jagakarsa, Kel cipedak DKI Jakarta Indonesia 12630. Available for web development, dashboards, automation, and IT support roles.",
+        "Based at Jakarta Selatan, Indonesia. Available for web development, dashboards, automation, and IT support roles.",
       socials: {
         whatsapp: "WhatsApp",
         linkedin: "LinkedIn",

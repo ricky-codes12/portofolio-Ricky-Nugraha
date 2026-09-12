@@ -7,6 +7,14 @@ import { getTranslations } from "../i18n";
 import { Badge } from "./ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 
+const projectImages = {
+  "https://ims-finance-frontend.vercel.app/": "ims-finance",
+  "https://company-profile-teal-eta.vercel.app/": "company-profile",
+  "https://bike-sharing-dashboard-qjornwxhtakibwxwqpd9ho.streamlit.app/": "bike-sharing",
+  "https://capstone-warisan-nusantara.vercel.app/#/": "warisan-nusantara",
+  "https://erp-management-system-five.vercel.app/login": "erp",
+};
+
 function Projects({ language }) {
   const t = getTranslations(language);
 
@@ -41,21 +49,34 @@ function Projects({ language }) {
             </CardHeader>
 
             <CardContent className="pt-0">
-              <div className="projects__preview" aria-hidden="true">
-                <div className="projects__preview-bar">
-                  <i></i>
-                  <i></i>
-                  <i></i>
-                </div>
-                <div className="projects__preview-body">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </div>
-              </div>
+              <a
+                className="projects__screenshot"
+                href={`/projects/${projectImages[project.demoUrl]}.png`}
+                target="_blank"
+                rel="noreferrer"
+                aria-label={`${project.title} — screenshot`}
+              >
+                <img
+                  src={`/projects/${projectImages[project.demoUrl]}.png`}
+                  alt={`${project.title} — screenshot`}
+                  width="1440"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
 
               <div className="mt-4 space-y-4">
-                <strong className="projects__metric block">{project.metric}</strong>
+                <dl className="projects__outcomes">
+                  <div>
+                    <dt>{t.projects.contributionLabel}</dt>
+                    <dd>{project.contribution}</dd>
+                  </div>
+                  <div>
+                    <dt>{t.projects.outcomeLabel}</dt>
+                    <dd>{project.outcome}</dd>
+                  </div>
+                </dl>
 
                 <div className="flex flex-wrap gap-2">
                   {project.tech.map((item) => (

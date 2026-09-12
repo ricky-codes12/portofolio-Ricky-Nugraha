@@ -1,6 +1,7 @@
 import { Bot, MessageCircle, Send, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
+import { CV_URL } from "../lib/cv";
 import { getTranslations } from "../i18n";
 
 const copy = {
@@ -13,7 +14,7 @@ const copy = {
     open: "Buka chat portfolio",
     close: "Tutup chat portfolio",
     fallback: "Maaf, saya hanya bisa menjawab pertanyaan berdasarkan informasi yang tersedia di portfolio Ricky.",
-    suggestions: ["Pengalaman terbaru", "Apa saja skill Ricky?", "Lihat proyek", "Cara menghubungi Ricky"],
+    suggestions: ["Pengalaman terbaru", "Apa saja skill Ricky?", "Kirim CV Ricky", "Nomor WA Ricky"],
   },
   en: {
     title: "Ask about Ricky",
@@ -24,7 +25,7 @@ const copy = {
     open: "Open portfolio chat",
     close: "Close portfolio chat",
     fallback: "Sorry, I can only answer questions using information available in Ricky's portfolio.",
-    suggestions: ["Latest experience", "What are Ricky's skills?", "Show projects", "How to contact Ricky"],
+    suggestions: ["Latest experience", "What are Ricky's skills?", "Send Ricky’s CV", "Ricky’s WhatsApp number"],
   },
   zh: {
     title: "了解 Ricky",
@@ -35,7 +36,7 @@ const copy = {
     open: "打开作品集聊天",
     close: "关闭作品集聊天",
     fallback: "抱歉，我只能根据 Ricky 作品集中的信息回答问题。",
-    suggestions: ["最新经历", "Ricky 有哪些技能？", "查看项目", "如何联系 Ricky"],
+    suggestions: ["最新经历", "Ricky 有哪些技能？", "下载 Ricky 的简历", "Ricky 的电话"],
   },
   ar: {
     title: "اسأل عن ريكي",
@@ -46,11 +47,12 @@ const copy = {
     open: "فتح محادثة معرض الأعمال",
     close: "إغلاق محادثة معرض الأعمال",
     fallback: "عذراً، يمكنني الإجابة فقط اعتماداً على المعلومات الموجودة في معرض أعمال ريكي.",
-    suggestions: ["أحدث خبرة", "ما مهارات ريكي؟", "عرض المشاريع", "كيفية التواصل مع ريكي"],
+    suggestions: ["أحدث خبرة", "ما مهارات ريكي؟", "سيرة ريكي", "واتساب ريكي"],
   },
 };
 
 const aliases = {
+  education: ["pendidikan", "pelatihan", "kuliah", "ipk", "education", "training", "教育", "التعليم"],
   greeting: ["halo", "hai", "hello", "hi", "你好", "您好", "مرحبا", "السلام"],
   hexacode: ["hexacode", "hexa", "web ai", "rag", "fine tuning", "fine-tuning", "llm", "qnb"],
   experience: ["pengalaman", "experience", "kerja", "karier", "company", "经历", "工作", "经验", "خبرة", "الخبرات", "عمل"],
@@ -67,6 +69,11 @@ const normalize = (value) =>
 
 function findIntent(question) {
   const normalized = normalize(question);
+  const wantsCV = /\b(cv|resume|curriculum vitae|daftar riwayat hidup)\b|简历|سيرة/.test(normalized);
+  const wantsPhone = /\b(wa|whatsapp|whatsap|watsapp|telp|telpon|telepon|telfn|telfon|telfn|tel|phone|telephone|no hp|nomor hp|no kontak)\b|电话|واتساب|هاتف/.test(normalized);
+  if (wantsCV && wantsPhone) return "cv-contact";
+  if (wantsCV) return "cv";
+  if (wantsPhone) return "contact";
   let bestMatch = null;
   let bestLength = 0;
 
@@ -91,6 +98,11 @@ function createAnswer(intent, t, language, fallback) {
   const join = (items) => items.join(isZh ? "、" : isAr ? "، " : ", ");
 
   switch (intent) {
+    case "cv":
+    case "cv-contact":
+      return isId ? "Ini CV terbaru Ricky. Kamu bisa melihat PDF atau mengunduhnya melalui tautan di bawah." : isZh ? "这是 Ricky 的最新简历。您可以通过下方链接查看或下载 PDF。" : isAr ? "هذه أحدث سيرة ذاتية لريكي. يمكنك عرض ملف PDF أو تنزيله عبر الروابط أدناه." : "Here is Ricky’s latest CV. View or download the PDF using the links below.";
+    case "education":
+      return t.education.groups.flatMap((group) => group.items.map((item) => `${item.institution} (${item.period}) — ${item.detail}`)).join("\n");
     case "greeting":
       return copy[language].welcome;
     case "profile":
@@ -138,11 +150,26 @@ function PortfolioChat({ language }) {
     const cleanQuestion = question.trim().slice(0, 240);
     if (!cleanQuestion) return;
 
-    const answer = createAnswer(findIntent(cleanQuestion), t, language, ui.fallback);
+    const intent = findIntent(cleanQuestion);
+    let answer = createAnswer(intent, t, language, ui.fallback);
+    const actions = [];
+    if (intent === "cv" || intent === "cv-contact") {
+      actions.push(
+        { label: t.hero.viewCV, href: CV_URL },
+        { label: t.hero.downloadCV, href: CV_URL, download: "CV_Ricky_Nugraha.pdf" },
+      );
+    }
+    if (intent === "contact" || intent === "cv-contact") {
+      if (intent === "cv-contact") answer += "\n" + createAnswer("contact", t, language, ui.fallback);
+      actions.push(
+        { label: "WhatsApp · 081387613515", href: "https://wa.me/6281387613515" },
+        { label: "☎ 081387613515", href: "tel:+6281387613515" },
+      );
+    }
     setMessages((current) => [
       ...current,
       { role: "user", text: cleanQuestion },
-      { role: "assistant", text: answer },
+      { role: "assistant", text: answer, actions },
     ]);
     setInput("");
   };
@@ -164,9 +191,18 @@ function PortfolioChat({ language }) {
 
           <div className="portfolio-chat__messages" ref={messagesRef} aria-live="polite">
             {messages.map((message, index) => (
-              <p className={`portfolio-chat__message portfolio-chat__message--${message.role}`} key={`${message.role}-${index}`}>
+              <div className={`portfolio-chat__message portfolio-chat__message--${message.role}`} key={`${message.role}-${index}`}>
                 {message.text}
-              </p>
+                {message.actions?.length > 0 && (
+                  <div className="portfolio-chat__links">
+                    {message.actions.map((action) => (
+                      <a key={action.label} href={action.href} download={action.download}
+                        target={action.download || action.href.startsWith("tel:") ? undefined : "_blank"}
+                        rel="noreferrer">{action.label}</a>
+                    ))}
+                  </div>
+                )}
+              </div>
             ))}
           </div>
 

@@ -11,6 +11,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import profile from "../assets/profile.png";
+import { CV_URL } from "../lib/cv";
 import { getTranslations } from "../i18n";
 import { Button } from "./ui/button";
 
@@ -35,7 +36,7 @@ function Hero({ language }) {
           "<0.05",
         )
         .from(
-          ".hero__buttons a",
+          ".hero__buttons a:not([download])",
           { y: 22, opacity: 0, stagger: 0.09, duration: 0.65 },
           "<0.08",
         )
@@ -144,6 +145,28 @@ function Hero({ language }) {
         <div className="hero__buttons">
           <Button
             as="a"
+            href={CV_URL}
+            variant="outline"
+            className="hero__button border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
+            download="CV_Ricky_Nugraha.pdf"
+          >
+            <Download size={18} />
+            {t.hero.downloadCV}
+          </Button>
+
+          <Button
+            as="a"
+            href={CV_URL}
+            target="_blank"
+            rel="noreferrer"
+            variant="outline"
+            className="hero__button"
+          >
+            {t.hero.viewCV}
+          </Button>
+
+          <Button
+            as="a"
             href="#projects"
             className="hero__button shadow-[0_18px_40px_rgba(14,116,144,0.24)]"
           >
@@ -158,17 +181,6 @@ function Hero({ language }) {
             className="hero__button"
           >
             {t.hero.contact}
-          </Button>
-
-          <Button
-            as="a"
-            href="/cv-ricky-nugraha.pdf"
-            variant="outline"
-            className="hero__button border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
-            download="CV_RickyNugraha.pdf"
-          >
-            <Download size={18} />
-            {t.hero.downloadCV}
           </Button>
         </div>
 
