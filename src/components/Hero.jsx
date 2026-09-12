@@ -11,7 +11,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import profile from "../assets/profile.png";
-import { CV_URL } from "../lib/cv";
+import { CV_URL, CV_DOWNLOAD_URL } from "../lib/cv";
 import { getTranslations } from "../i18n";
 import { Button } from "./ui/button";
 
@@ -145,7 +145,7 @@ function Hero({ language }) {
         <div className="hero__buttons">
           <Button
             as="a"
-            href={CV_URL}
+            href={CV_DOWNLOAD_URL}
             variant="outline"
             className="hero__button border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
             download="CV_Ricky_Nugraha.pdf"

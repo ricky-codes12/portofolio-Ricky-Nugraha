@@ -1,7 +1,7 @@
 import { Bot, MessageCircle, Send, Sparkles, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
-import { CV_URL } from "../lib/cv";
+import { CV_URL, CV_DOWNLOAD_URL } from "../lib/cv";
 import { getTranslations } from "../i18n";
 
 const copy = {
@@ -156,7 +156,7 @@ function PortfolioChat({ language }) {
     if (intent === "cv" || intent === "cv-contact") {
       actions.push(
         { label: t.hero.viewCV, href: CV_URL },
-        { label: t.hero.downloadCV, href: CV_URL, download: "CV_Ricky_Nugraha.pdf" },
+        { label: t.hero.downloadCV, href: CV_DOWNLOAD_URL, download: "CV_Ricky_Nugraha.pdf" },
       );
     }
     if (intent === "contact" || intent === "cv-contact") {
