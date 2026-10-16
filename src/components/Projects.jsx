@@ -1,7 +1,12 @@
+import { useState } from "react";
+import { getHexaProjects, getProjectCopy } from "../data/hexa-projects";
+import ProjectDetails from "./ProjectDetails";
 import {
   ArrowUpRight,
   Code2,
   ExternalLink,
+  Images,
+  ImageOff,
 } from "lucide-react";
 import { getTranslations } from "../i18n";
 import { Badge } from "./ui/badge";
@@ -17,6 +22,9 @@ const projectImages = {
 
 function Projects({ language }) {
   const t = getTranslations(language);
+  const copy = getProjectCopy(language);
+  const hexaProjects = getHexaProjects(language);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = t.projects.projects.map((project) => ({
     ...project,
@@ -33,6 +41,27 @@ function Projects({ language }) {
         <h2>{t.projects.title}</h2>
       </div>
 
+      <div className="projects__group-heading"><h3>{copy.company}</h3><span>05</span></div>
+      <div className="projects__grid projects__grid--company">
+        {hexaProjects.map((project) => (
+          <Card className="company-project" key={project.id}>
+            <CardHeader>
+              <div className="company-project__labels"><Badge variant="outline">{project.type}</Badge><span>{copy.internal}</span></div>
+              <CardTitle>{project.title}</CardTitle>
+              <CardDescription>{project.desc}</CardDescription>
+            </CardHeader>
+            <CardContent className="company-project__content pt-0">
+              <button type="button" className="company-project__preview" data-project-details={project.id} aria-label={`${copy.details}: ${project.title}`} onClick={() => setSelectedProject(project)}>
+                {project.photos.length ? <img src={project.photos[0].src} alt={project.title} loading="lazy" /> : <><ImageOff size={30} /><span>{copy.gallery}</span><small>{copy.empty}</small></>}
+              </button>
+              <div className="company-project__role"><span>{copy.role}</span><strong>{project.role}</strong></div>
+              <div className="project-details__tech">{project.tech.map(item => <Badge key={item} variant="secondary">{item}</Badge>)}</div>
+              <button type="button" className="company-project__details" onClick={() => setSelectedProject(project)}><Images size={18} />{copy.details}<ArrowUpRight size={17} /></button>
+            </CardContent>
+          </Card>
+        ))}
+      </div>
+      <div className="projects__group-heading"><h3>{copy.personal}</h3><span>{String(projects.length).padStart(2, '0')}</span></div>
       <div className="projects__grid">
         {projects.map((project) => (
           <Card
@@ -115,6 +144,7 @@ function Projects({ language }) {
           </Card>
         ))}
       </div>
+      {selectedProject ? <ProjectDetails key={selectedProject.id} project={selectedProject} copy={copy} language={language} onClose={() => setSelectedProject(null)} /> : null}
     </section>
   );
 }

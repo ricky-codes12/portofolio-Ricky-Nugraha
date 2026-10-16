@@ -10,7 +10,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: rgba(14, 116, 144, 0.35) transparent;
+  scrollbar-color: rgba(124, 58, 237, 0.35) transparent;
 }
 
 ::-webkit-scrollbar {
@@ -19,7 +19,7 @@
 
 ::-webkit-scrollbar-thumb {
   border-radius: 999px;
-  background: rgba(14, 116, 144, 0.35);
+  background: rgba(124, 58, 237, 0.35);
 }
 
 ::-webkit-scrollbar-track {

@@ -21,7 +21,9 @@ function Experience({ language }) {
 
               <div className="experience__content">
                 <h3>{item.role}</h3>
-                <p>{item.desc}</p>
+                <ul className="experience__responsibilities">
+                  {(item.points || item.desc.split(/(?<=[.!?])\s+|(?<=。)/u).filter(Boolean)).map((point) => <li key={point}>{point}</li>)}
+                </ul>
               </div>
             </article>
           </li>

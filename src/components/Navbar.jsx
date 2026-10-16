@@ -5,7 +5,7 @@ import { getTranslations } from "../i18n";
 function LanguageFlag({ language }) {
   if (language === "zh") {
     return (
-      <svg viewBox="0 0 60 36" aria-hidden="true">
+      <svg className="language-flag" viewBox="0 0 60 36" aria-hidden="true">
         <rect width="60" height="36" fill="#de2910" />
         <path d="m12 6 1.8 5.5h5.8L15 14.9l1.8 5.5-4.8-3.4-4.8 3.4L9 14.9l-4.7-3.4h5.8Z" fill="#ffde00" transform="scale(.58) translate(7 2)" />
       </svg>
@@ -14,7 +14,7 @@ function LanguageFlag({ language }) {
 
   if (language === "ar") {
     return (
-      <svg viewBox="0 0 60 36" aria-hidden="true">
+      <svg className="language-flag" viewBox="0 0 60 36" aria-hidden="true">
         <rect width="60" height="36" fill="#006c35" />
         <path d="M15 24h30" stroke="#fff" strokeWidth="2" />
         <path d="M21 13h18" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" />
@@ -24,7 +24,7 @@ function LanguageFlag({ language }) {
 
   if (language === "en") {
     return (
-      <svg viewBox="0 0 60 36" aria-hidden="true">
+      <svg className="language-flag" viewBox="0 0 60 36" aria-hidden="true">
         <rect width="60" height="36" fill="#012169" />
         <path d="M0 0 60 36M60 0 0 36" stroke="#fff" strokeWidth="8" />
         <path d="M0 0 60 36M60 0 0 36" stroke="#c8102e" strokeWidth="4" />
@@ -35,7 +35,7 @@ function LanguageFlag({ language }) {
   }
 
   return (
-    <svg viewBox="0 0 60 36" aria-hidden="true">
+    <svg className="language-flag" viewBox="0 0 60 36" aria-hidden="true">
       <rect width="60" height="18" fill="#e70011" />
       <rect y="18" width="60" height="18" fill="#fff" />
     </svg>
