@@ -1,6 +1,5 @@
 import {
   ArrowUpRight,
-  Download,
   Mail,
   MapPin,
   Sparkles,
@@ -11,7 +10,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 import profile from "../assets/profile.png";
-import { CV_URL, CV_DOWNLOAD_URL } from "../lib/cv";
+import CVPicker from "./CVPicker";
 import { getTranslations } from "../i18n";
 import { Button } from "./ui/button";
 
@@ -36,7 +35,7 @@ function Hero({ language }) {
           "<0.05",
         )
         .from(
-          ".hero__buttons a:not([download])",
+          ".hero__buttons > a",
           { y: 22, opacity: 0, stagger: 0.09, duration: 0.65 },
           "<0.08",
         )
@@ -143,27 +142,8 @@ function Hero({ language }) {
         <p className="hero__desc">{t.hero.description}</p>
 
         <div className="hero__buttons">
-          <Button
-            as="a"
-            href={CV_DOWNLOAD_URL}
-            variant="outline"
-            className="hero__button border-emerald-600 bg-emerald-600 text-white shadow-[0_18px_40px_rgba(5,150,105,0.28)] hover:border-emerald-700 hover:bg-emerald-700"
-            download="CV_Ricky_Nugraha.pdf"
-          >
-            <Download size={18} />
-            {t.hero.downloadCV}
-          </Button>
-
-          <Button
-            as="a"
-            href={CV_URL}
-            target="_blank"
-            rel="noreferrer"
-            variant="outline"
-            className="hero__button"
-          >
-            {t.hero.viewCV}
-          </Button>
+          <CVPicker label={t.hero.downloadCV} download />
+          <CVPicker label={t.hero.viewCV} />
 
           <Button
             as="a"

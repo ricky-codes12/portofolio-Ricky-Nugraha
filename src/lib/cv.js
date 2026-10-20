@@ -1,2 +1,4 @@
-export const CV_URL = "/cv-ricky-nugraha.pdf?v=5f5aab3e81f9";
-export const CV_DOWNLOAD_URL = `${CV_URL}&download=1`;
+export const CV_OPTIONS = [
+  { language: "id", label: "Bahasa Indonesia", url: "/CV_Ricky_Nugraha_Indonesia.pdf", filename: "CV_Ricky_Nugraha_Indonesia.pdf" },
+  { language: "en", label: "English", url: "/CV_Ricky_Nugraha_English.pdf", filename: "CV_Ricky_Nugraha_English.pdf" },
+];
