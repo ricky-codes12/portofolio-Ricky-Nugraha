@@ -91,4 +91,41 @@
   .hero *, .featured-work * { animation: none !important; transition: none !important; }
 }
 
+.project-catalogue {
+  border-block: 1px solid var(--line);
+  padding-block: 8px;
+
+  > summary {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 22px 4px;
+    color: var(--ink);
+    list-style: none;
+    cursor: pointer;
+
+    &::-webkit-details-marker { display: none; }
+    &::marker { content: ""; }
+    > span:first-child { flex: 1; min-width: 0; }
+    strong { display: block; font-size: clamp(18px, 2.5vw, 24px); font-weight: 650; }
+    > span:first-child > span { display: block; margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.7; }
+    &:hover strong { color: var(--brand-strong); }
+    &:focus-visible { outline: 2px solid var(--brand-strong); outline-offset: 5px; border-radius: 6px; }
+  }
+  &[open] > summary > svg { transform: rotate(180deg); }
+  &__count { border: 1px solid var(--line); border-radius: 999px; padding: 6px 12px; color: var(--brand-strong); font-size: 13px; font-variant-numeric: tabular-nums; }
+  &[open] { padding-bottom: 32px; }
+}
+@media (max-width: 600px) {
+  .portfolio-chat__toggle {
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    padding: 0;
+    justify-content: center;
+    border-radius: 50%;
+  }
+  .portfolio-chat__toggle-copy, .portfolio-chat__toggle > i { display: none; }
+}
+
 }

@@ -5,6 +5,7 @@ import { getWargaBNHProject } from "../data/warga-bnh";
 import { getPortfolioCopy } from "../data/portfolio-copy";
 import {
   ArrowUpRight,
+  ChevronDown,
   Code2,
   ExternalLink,
   Images,
@@ -73,7 +74,13 @@ function Projects({ language }) {
         </article>
       </div>
 
-      <div className="projects__group-heading"><h3>{copy.company}</h3><span>05</span></div>
+      <details className="project-catalogue">
+        <summary>
+          <span><strong>{intro.catalogue}</strong><span>{intro.catalogueHint}</span></span>
+          <span className="project-catalogue__count">{hexaProjects.length + projects.length}</span>
+          <ChevronDown size={20} aria-hidden="true" />
+        </summary>
+      <div className="projects__group-heading"><h3>{copy.company}</h3><span>{String(hexaProjects.length).padStart(2, '0')}</span></div>
       <div className="projects__grid projects__grid--company">
         {hexaProjects.map((project) => (
           <Card className="company-project" key={project.id}>
@@ -176,6 +183,7 @@ function Projects({ language }) {
           </Card>
         ))}
       </div>
+      </details>
       {selectedProject ? <ProjectDetails key={selectedProject.id} project={selectedProject} copy={copy} language={language} onClose={() => setSelectedProject(null)} /> : null}
     </section>
   );
