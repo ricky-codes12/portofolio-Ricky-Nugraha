@@ -2,6 +2,7 @@ import { useState } from "react";
 import { getHexaProjects, getProjectCopy } from "../data/hexa-projects";
 import ProjectDetails from "./ProjectDetails";
 import { getWargaBNHProject } from "../data/warga-bnh";
+import { getPortfolioCopy } from "../data/portfolio-copy";
 import {
   ArrowUpRight,
   Code2,
@@ -24,7 +25,9 @@ const projectImages = {
 function Projects({ language }) {
   const t = getTranslations(language);
   const copy = getProjectCopy(language);
+  const intro = getPortfolioCopy(language);
   const hexaProjects = getHexaProjects(language);
+  const simulator = hexaProjects.find((project) => project.id === "simulator");
   const [selectedProject, setSelectedProject] = useState(null);
 
   const projects = [getWargaBNHProject(language), ...t.projects.projects.map((project) => ({
@@ -39,7 +42,35 @@ function Projects({ language }) {
     >
       <div className="section__title">
         <p>{t.projects.eyebrow}</p>
-        <h2>{t.projects.title}</h2>
+        <h2>{intro.featured}</h2>
+        <div className="projects__intro">{intro.featuredIntro}</div>
+      </div>
+
+      <div className="featured-work">
+        <article className="featured-work__card">
+          <a className="featured-work__preview" href="/projects/warga-bnh.webp" target="_blank" rel="noreferrer" aria-label={`Warga BNH — ${intro.screenshot}`}>
+            <img src="/projects/warga-bnh.webp" alt="Warga BNH" width="1440" height="900" loading="lazy" />
+            <span>{intro.screenshot}<ArrowUpRight size={17} /></span>
+          </a>
+          <div className="featured-work__body">
+            <p className="featured-work__category">{intro.personal}</p>
+            <h3>Warga BNH</h3>
+            <p>{intro.bnh}</p>
+            <div className="project-details__tech">{["Next.js", "PostgreSQL", "Tesseract.js"].map(item => <Badge key={item} variant="outline">{item}</Badge>)}</div>
+          </div>
+        </article>
+        <article className="featured-work__card">
+          <button type="button" className="featured-work__preview" onClick={() => setSelectedProject(simulator)} aria-label={`Hexa.Simulator — ${copy.details}`}>
+            <img src={simulator.photos[0].src} alt="Hexa.Simulator" width="1440" height="900" loading="lazy" />
+            <span>{copy.details}<ArrowUpRight size={17} /></span>
+          </button>
+          <div className="featured-work__body">
+            <p className="featured-work__category">{intro.company}</p>
+            <h3>Hexa.Simulator</h3>
+            <p>{intro.simulator}</p>
+            <div className="project-details__tech">{["SvelteKit", "Go", "MQTT / TCP / HTTP"].map(item => <Badge key={item} variant="outline">{item}</Badge>)}</div>
+          </div>
+        </article>
       </div>
 
       <div className="projects__group-heading"><h3>{copy.company}</h3><span>05</span></div>

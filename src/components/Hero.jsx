@@ -11,115 +11,26 @@ import gsap from "gsap";
 
 import profile from "../assets/profile.png";
 import CVPicker from "./CVPicker";
+import { getPortfolioCopy } from "../data/portfolio-copy";
 import { getTranslations } from "../i18n";
 import { Button } from "./ui/button";
 
 function Hero({ language }) {
   const heroRef = useRef(null);
-  const imageRef = useRef(null);
   const t = getTranslations(language);
+  const copy = getPortfolioCopy(language);
 
   useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.timeline({ defaults: { ease: "power3.out" } });
-
-      tl.from(".hero__label", { y: 30, opacity: 0, duration: 0.7 })
-        .from(
-          ".hero__title",
-          { y: 40, opacity: 0, duration: 0.9 },
-          "<0.04",
-        )
-        .from(
-          ".hero__desc",
-          { y: 26, opacity: 0, duration: 0.7 },
-          "<0.05",
-        )
-        .from(
-          ".hero__buttons > a",
-          { y: 22, opacity: 0, stagger: 0.09, duration: 0.65 },
-          "<0.08",
-        )
-        .from(
-          ".hero__meta span",
-          { y: 18, opacity: 0, stagger: 0.06, duration: 0.55 },
-          "<0.05",
-        )
-        .from(
-          ".hero__stats div",
-          { y: 20, opacity: 0, stagger: 0.08, duration: 0.55 },
-          "<0.04",
-        )
-        .from(
-          ".hero__socials a",
-          { y: 18, opacity: 0, stagger: 0.05, duration: 0.5 },
-          "<0.02",
-        )
-        .from(
-          ".hero__badge",
-          { y: 24, opacity: 0, stagger: 0.08, duration: 0.55 },
-          "<0.04",
-        )
-        .fromTo(
-          ".hero__circle",
-          { scale: 0.94, rotate: -4, opacity: 0 },
-          { scale: 1, rotate: 0, opacity: 1, duration: 1, ease: "back.out(1.5)" },
-          "<0.05",
-        );
-
-      gsap.to(".hero__badge--top", {
-        y: -5,
-        duration: 3.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-
-      gsap.to(".hero__badge--bottom", {
-        y: 5,
-        duration: 3.2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut",
-      });
-    }, heroRef);
-
-    const heroNode = heroRef.current;
-    const imageNode = imageRef.current;
-
-    const handlePointerMove = (event) => {
-      if (!heroNode || !imageNode) return;
-
-      const rect = heroNode.getBoundingClientRect();
-      const x = (event.clientX - rect.left) / rect.width - 0.5;
-      const y = (event.clientY - rect.top) / rect.height - 0.5;
-
-      gsap.to(imageNode, {
-        x: x * 16,
-        y: y * 16,
-        duration: 0.35,
-        ease: "power2.out",
-      });
-    };
-
-    const handlePointerLeave = () => {
-      if (!imageNode) return;
-
-      gsap.to(imageNode, {
-        x: 0,
-        y: 0,
-        duration: 0.6,
-        ease: "power2.out",
-      });
-    };
-
-    heroNode?.addEventListener("pointermove", handlePointerMove);
-    heroNode?.addEventListener("pointerleave", handlePointerLeave);
-
-    return () => {
-      ctx.revert();
-      heroNode?.removeEventListener("pointermove", handlePointerMove);
-      heroNode?.removeEventListener("pointerleave", handlePointerLeave);
-    };
+    const media = gsap.matchMedia();
+    media.add("(prefers-reduced-motion: no-preference)", () => {
+      const ctx = gsap.context(() => {
+        gsap.from(".hero__label, .hero__title, .hero__desc, .hero__image", {
+          y: 16, opacity: 0, stagger: 0.08, duration: 0.55, ease: "power2.out",
+        });
+      }, heroRef);
+      return () => ctx.revert();
+    });
+    return () => media.revert();
   }, []);
 
   return (
@@ -131,20 +42,17 @@ function Hero({ language }) {
       <div className="hero__content">
         <p className="hero__label">
           <Sparkles size={16} />
-          {t.hero.label}
+          {copy.label}
         </p>
 
         <h1 className="hero__title">
           Ricky Nugraha
-          <span>{t.hero.role}</span>
+          <span>{copy.role}</span>
         </h1>
 
-        <p className="hero__desc">{t.hero.description}</p>
+        <p className="hero__desc">{copy.description}</p>
 
         <div className="hero__buttons">
-          <CVPicker label={t.hero.downloadCV} download />
-          <CVPicker label={t.hero.viewCV} />
-
           <Button
             as="a"
             href="#projects"
@@ -153,6 +61,9 @@ function Hero({ language }) {
             <ArrowUpRight size={18} />
             {t.hero.viewProjects}
           </Button>
+
+          <CVPicker label={t.hero.downloadCV} download />
+          <CVPicker label={t.hero.viewCV} />
 
           <Button
             as="a"
@@ -169,24 +80,7 @@ function Hero({ language }) {
             <MapPin size={18} />
             {t.hero.location}
           </span>
-          <span>{t.hero.availability}</span>
-        </div>
-
-        <div className="hero__stats" aria-label="Portfolio highlights">
-          <div>
-            <strong>{t.hero.stats.focusValue}</strong>
-            <span>{t.hero.stats.focusLabel}</span>
-          </div>
-
-          <div>
-            <strong>{t.hero.stats.techValue}</strong>
-            <span>{t.hero.stats.techLabel}</span>
-          </div>
-
-          <div>
-            <strong>{t.hero.stats.hybridValue}</strong>
-            <span>{t.hero.stats.hybridLabel}</span>
-          </div>
+          <span>{copy.focus}</span>
         </div>
 
         <div className="hero__socials">
@@ -237,12 +131,7 @@ function Hero({ language }) {
 
       <div
         className="hero__image"
-        ref={imageRef}
       >
-        <div className="hero__badge hero__badge--top">
-          <strong>{t.hero.badgeTop}</strong>
-          <span>{t.hero.badgeTopDesc}</span>
-        </div>
         <div className="hero__circle">
           <img
             src={profile}
@@ -250,8 +139,8 @@ function Hero({ language }) {
           />
         </div>
         <div className="hero__badge hero__badge--bottom">
-          <strong>{t.hero.badgeBottom}</strong>
-          <span>{t.hero.badgeBottomDesc}</span>
+          <strong>React · Next.js · Go</strong>
+          <span>{copy.delivery}</span>
         </div>
       </div>
     </section>

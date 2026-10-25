@@ -1,4 +1,5 @@
 @use "./animations";
+@use "./portfolio-refresh" as refresh;
 
 :root {
   --ink: #0f172a;
@@ -3019,3 +3020,5 @@ main {
 
   &__format { color: var(--muted); font-size: 11px; }
 }
+
+@include refresh.apply;

@@ -66,9 +66,9 @@ function Navbar({ theme, onToggleTheme, language, onChangeLanguage }) {
 
   const menus = [
     { name: t.nav.home, link: "#home" },
+    { name: t.nav.projects, link: "#projects" },
     { name: t.nav.about, link: "#about" },
     { name: t.nav.skills, link: "#skills" },
-    { name: t.nav.projects, link: "#projects" },
     { name: t.nav.experience, link: "#experience" },
     { name: t.nav.certificates, link: "#certificates" },
     { name: t.nav.contact, link: "#contact" },

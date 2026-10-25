@@ -44,7 +44,7 @@ export const translations = {
     about: {
       eyebrow: "Tentang Saya",
       title: "Tentang Saya",
-      tag: "Fresh Graduate",
+      tag: "Application Developer",
       heading: "Siap membantu tim membangun produk digital yang stabil, cepat, dan mudah digunakan.",
       intro:
         "Saya menggabungkan kemampuan frontend, pengelolaan data, dan IT support untuk menyelesaikan masalah teknis dari sisi produk maupun operasional.",
@@ -463,7 +463,7 @@ export const translations = {
     about: {
       eyebrow: "About Me",
       title: "About Me",
-      tag: "Fresh Graduate",
+      tag: "Application Developer",
       heading: "Ready to help your team ship digital products that are stable, fast, and easy to use.",
       intro:
         "I combine frontend development, data handling, and IT support to solve technical problems from both product and operations sides.",

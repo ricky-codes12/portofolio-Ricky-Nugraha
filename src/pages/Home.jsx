@@ -21,9 +21,9 @@ function Home({ theme, onToggleTheme, language, onChangeLanguage }) {
       />
       <main>
         <Hero language={language} />
+        <Projects language={language} />
         <About language={language} />
         <Skills language={language} />
-        <Projects language={language} />
         <Experience language={language} />
         <Education language={language} />
         <Certificates language={language} />
