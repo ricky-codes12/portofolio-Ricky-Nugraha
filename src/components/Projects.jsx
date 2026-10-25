@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getHexaProjects, getProjectCopy } from "../data/hexa-projects";
 import ProjectDetails from "./ProjectDetails";
+import { getWargaBNHProject } from "../data/warga-bnh";
 import {
   ArrowUpRight,
   Code2,
@@ -26,10 +27,10 @@ function Projects({ language }) {
   const hexaProjects = getHexaProjects(language);
   const [selectedProject, setSelectedProject] = useState(null);
 
-  const projects = t.projects.projects.map((project) => ({
+  const projects = [getWargaBNHProject(language), ...t.projects.projects.map((project) => ({
     ...project,
     codeUrl: project.codeUrl ?? "https://github.com/ricky-codes12",
-  }));
+  }))];
 
   return (
     <section
@@ -80,13 +81,13 @@ function Projects({ language }) {
             <CardContent className="pt-0">
               <a
                 className="projects__screenshot"
-                href={`/projects/${projectImages[project.demoUrl]}.png`}
+                href={(project.image ?? `/projects/${projectImages[project.demoUrl]}.png`)}
                 target="_blank"
                 rel="noreferrer"
                 aria-label={`${project.title} — screenshot`}
               >
                 <img
-                  src={`/projects/${projectImages[project.demoUrl]}.png`}
+                  src={(project.image ?? `/projects/${projectImages[project.demoUrl]}.png`)}
                   alt={`${project.title} — screenshot`}
                   width="1440"
                   height="900"
@@ -119,7 +120,7 @@ function Projects({ language }) {
                 </div>
 
                 <div className="projects__links">
-                  <a
+                  {project.codeUrl && <a
                     href={project.codeUrl}
                     target="_blank"
                     rel="noreferrer"
@@ -127,9 +128,9 @@ function Projects({ language }) {
                   >
                     <Code2 size={18} />
                     {t.projects.code}
-                  </a>
+                  </a>}
 
-                  <a
+                  {project.demoUrl && <a
                     href={project.demoUrl}
                     target="_blank"
                     rel="noreferrer"
@@ -137,7 +138,7 @@ function Projects({ language }) {
                   >
                     <ExternalLink size={18} />
                     {t.projects.demo}
-                  </a>
+                  </a>}
                 </div>
               </div>
             </CardContent>
